@@ -1,1 +1,1 @@
-var[d,s]=(q||'1d20').split`d`,r=[],a=Math.max,d=a(d,1),s=a(s,2);for(;d--;)r.push(~~(Math.random()*s)+1);`${u} rolled ${r.join`, `} with a 🎲${s}`.replace(/,(?=[^,]*$)/,' and');
+'test output'
