@@ -1,6 +1,6 @@
 var i = parseInt,
 	d = [],
-	e = '${p}'=='twitch'?'melziiD20':'🎲20',
+	e = p=='twitch'?'melziiD20':'🎲20',
 	j = 0,
 	l,
 	m = q.match(/^(([0-9]+)\s+)?(([0-9]+)?d([0-9]+)|([0-9]+))$/) ?? {},
