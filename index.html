@@ -1,49 +1,26 @@
 <!DOCTYPE html>
 <html>
-<style>
-h1
-{
-	color: #cccccc;
-}
-h2
-{
-	color: #cccccc;
-}
-p
-{
-	color: #cccccc;
-}
-li
-{
-	color: #cccccc;
-}
-td
-{
-	text-align: center;
-	color: #cccccc;
-	padding: 10px;
-}
-a:link
-{
-	color: gray;
-}
-a:visited
-{
-	color: gray;
-}
-a:hover
-{
-	color: gray;
-}
-a:active
-{
-	color: gray;
-}
-</style>
-<head>
-<title>PunishedPineapple</title>
-</head>
-<body bgcolor="black">
-<p><a href="./potd_maps/index.html">PoTD Maps</a></p>
+<body>
+<p id=out></p>
 </body>
+<script>
+	const urlParams = new URLSearchParams(window.location.search);
+	const query = urlParams.get('query');
+	const out = document.getElementById('out');
+	
+	var d = [];
+	var m = query.match(/^(([0-9]+)\s+)?(([0-9]+)?d([0-9]+)|([0-9]+))$/) ?? {};
+	var c = parseInt(m[2] ?? 1);
+	var n = parseInt(m[4] ?? 1);
+	var s = parseInt(m[5] ?? m[6] ?? 20);
+
+	c = c > 20 ? 20 : (c < 1 || !c ? 1 : c);
+	n = (n < 1 ? 1 : n);
+	s = (s < 1 ? 1 : s);
+	for(;c--;) d.push(Math.round(n*(s-1)*Math.random())+n);
+
+	r = `rolled ${d.join(', ')} with ${n < 2 ? 'a ' : n + '×'}🎲` + s;
+	r.replace(/,(?=[^,]*$)/,' and');
+	out.innerHTML = r;
+</script>
 </html>
