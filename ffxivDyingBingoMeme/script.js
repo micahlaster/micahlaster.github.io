@@ -78,23 +78,23 @@ window.onload = function load() {
 	var columns = document.getElementsByClassName("column");
 	for(column in columns){
 		columns[column].src = "assets/column.png";
-		columns[column].height = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
+		columns[column].height = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
 		columns[column].width = 92;//92 cause icons are forced to 70x70 and theres a 11px border
 	}
 	var rows = document.getElementsByClassName("row");
 	for(row in rows){
 		rows[row].src = "assets/row.png";
 		rows[row].height = 92;//92 cause icons are forced to 70x70 and theres a 11px border
-		rows[row].width = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
+		rows[row].width = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
 	}
 	var topLeftBottomRight = document.getElementById("topLeftBottomRight");
 	topLeftBottomRight.src ="assets/topLeftBottomRight.png";
-	topLeftBottomRight.height = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
-	topLeftBottomRight.width = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
+	topLeftBottomRight.height = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
+	topLeftBottomRight.width = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
 	var topRightBottomLeft = document.getElementById("topRightBottomLeft");
 	topRightBottomLeft.src ="assets/topRightBottomLeft.png";
-	topRightBottomLeft.height = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
-	topRightBottomLeft.width = json.boardSize*92;//92 cause icons are forced to 70x70 and theres a 11px border
+	topRightBottomLeft.height = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
+	topRightBottomLeft.width = 460;//460 cause icons are forced to 70x70 and theres a 11px border and it covers 5 spots
 }
 function darkModeToggle() {
 	//if already in dark mode set variable to false indicating now in light mode else set variable to true indicating now in dark mode
